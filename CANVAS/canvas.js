@@ -41,9 +41,10 @@ function Circle(x, y, dx, dy, r, dr) {
 //seleciona aleatoriamente as coordenadas de que parte cada círculo
 //seleciona aleatoriamente a velocidade e a direção
 //seleciona o tamanho do raio e a velocidade com q cresce
+var quantidade_circulos = 15;
 var circleArray = [];
 
-for (var i = 0; i < 15; i++){
+for (var i = 0; i < quantidade_circulos; i++){
 	var r = Math.random() * 40;
 	var x = Math.random() * (800 - r * 2) + r;
 	var y = Math.random() * (600 - r * 2) + r;
@@ -69,13 +70,13 @@ function animate() {
 
 	for (const circle of circleArray) {
 		if (circle.r == maiorRaio) {
-			circle.draw('red');
+			circle.draw('#000080');
 		}
 		if (circle.r == menorRaio) {
-			circle.draw('yellow');
+			circle.draw('#FFD700');
 		}
 		if (circle.r != maiorRaio && circle.r != menorRaio) {
-			circle.draw('blue');
+			circle.draw('#DC143C');
 		}
 	}
 }
