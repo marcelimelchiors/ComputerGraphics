@@ -72,10 +72,10 @@ function animate() {
 		if (circle.r == maiorRaio) {
 			circle.draw('#000080');
 		}
-		if (circle.r == menorRaio) {
+		else if (circle.r == menorRaio) {
 			circle.draw('#FFD700');
 		}
-		if (circle.r != maiorRaio && circle.r != menorRaio) {
+		else {
 			circle.draw('#DC143C');
 		}
 	}
